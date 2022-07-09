@@ -40,7 +40,9 @@ const App = () => {
         todoText={todoText}
         onChange={onChangeTodoText}
         onClick={onClickAdd}
+        disabled={5 <= incompleteTodos.length}
       />
+      {5 <= incompleteTodos.length && <p>登録できるTODOは５個までです</p>}
       <InCompleteTodos
         todos={incompleteTodos}
         onClickComplete={onClickComplete}
